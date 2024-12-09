@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.scale {
+  transform: scale(1, 1);
+  transition: transform 0.5s ease;
+}
+
+.scale:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.rotate-1{
+  transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
+  transition: transform 0.5s ease;
+}
+
+.rotate-2{
+  transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
+  transition: transform 0.5s ease;
+}
+
+.rotate-3{
+  transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
+  transition: transform 0.5s ease;
+}
+
+.rotate-4{
+  transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
+  transition: transform 0.5s ease;
+}
+
+.rotate-1:hover{
+  transform: perspective(500px) scaleZ(1.2) rotateY(30deg);
+}
+
+.rotate-2:hover{
+  transform: perspective(500px) scaleZ(1.2) rotateX(30deg);
+}
+  
+.rotate-3:hover{
+  transform: perspective(500px) scaleZ(1.2) rotateX(-30deg);
+}
+
+.rotate-4:hover{
+  transform: perspective(500px) scaleZ(1.2) rotateY(-30deg);
+}
+
+.blr{
+  backdrop-filter: blur(5px);
+}
+
+.shadow{
+  box-shadow: 1px 1px 1px black;
+}
