@@ -12,7 +12,7 @@ const Navbar = () => {
             >
                 <ul className="flex items-center justify-center gap-20 text-white max-xl:gap-5 max-xl:py-4 max-md:gap-0">
                     <li className="max-xl:hidden">
-                        <NavLink to="/"><img className="w-20 rounded-xl" src="logo.webp" alt="logo" /></NavLink>
+                        <NavLink to="/"><img className="w-20 h-auto rounded-xl" src="logo.webp" alt="logo" /></NavLink>
                     </li>
                     <li className="cursor-pointer"><NavLink className={(e) => { return e.isActive ? "brightness-200 hover:no-underline hover:text-black shadow-xl font-bold md:px-3 md:py-2 transition duration-1000 bg-white text-black rounded-full max-md:text-[12px] max-md:px-2 max-md:py-1" : "hover:no-underline hover:transition hover:duration-1000 font-semibold shadow-xl rounded-full hover:text-black hover:rounded-full md:px-3 md:py-2 hover:bg-white max-md:text-[12px] max-md:px-2 max-md:py-1" }} to="/">Home</NavLink></li>
                     <li className="cursor-pointer"><NavLink className={(e) => { return e.isActive ? "brightness-200 hover:no-underline hover:text-black shadow-xl font-bold md:px-3 md:py-2 transition duration-1000 bg-white text-black rounded-full max-md:text-[12px] max-md:px-2 max-md:py-1" : "hover:no-underline hover:transition hover:duration-1000 font-semibold shadow-xl rounded-full hover:text-black hover:rounded-full md:px-3 md:py-2 hover:bg-white max-md:text-[12px] max-md:px-2 max-md:py-1" }} to="/about">About</NavLink></li>

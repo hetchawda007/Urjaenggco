@@ -174,7 +174,7 @@ const Contact = () => {
             onAnimationComplete={() => setanimate6(false)}
           >
             <form action="submit" className="flex flex-col gap-6 items-center justify-center pl-10 max-md:pl-0">
-              <h1 className="text-2xl text-slate-700 font-bold text-center">How can we help you?</h1>
+              <h1 className="text-2xl text-slate-700 font-bold lato-bold text-center">How can we help you?</h1>
               <div className="flex items-center gap-5">
                 <input value={form.name} onChange={handlechange} placeholder="Name" className="placeholder-slate-500 bg-gray-200 shadow-lg w-80 rounded-lg text-slate-700 px-2 py-1 text-base" type="text" name="name" id="name" />
               </div>
@@ -200,14 +200,14 @@ const Contact = () => {
 
           </motion.div>
 
-          <motion.div className="w-[49%] h-full flex items-center max-md:w-full"
+          <motion.div className="w-[49%] h-full flex items-center text-white roboto-regular max-md:w-full"
             initial={animate6 ? { opacity: 0, x: 300 } : { opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0, transition: { duration: 2 } }}
             exit={{ opacity: 1, x: 300 }}
             onAnimationComplete={() => setanimate6(false)}
           >
-            <div className="rounded-2xl mx-auto w-[55%] pl-10 py-8 flex flex-col gap-5 bg-blue-950 text-white h-[60%] max-md:w-[85%] max-md:pl-5 max-md:pr-5 max-md:my-14">
-              <h1 className="text-3xl font-bold text-center pr-10">Contact Us</h1>
+            <div className="rounded-2xl mx-auto w-[55%] pl-10 py-8 lato-bold flex flex-col gap-5 bg-blue-950 text-sm h-[60%] max-md:w-[85%] max-md:pl-5 max-md:pr-5 max-md:my-14">
+              <h1 className="text-3xl font-bold text-white lato-bold text-center pr-10">Contact Us</h1>
               <hr className="w-[90%] bg-white" />
               <div className="flex gap-5">
                 <a target="_blank" href="https://maps.app.goo.gl/QtJLjUZYvGJJbaeNA"><lord-icon
@@ -218,7 +218,7 @@ const Contact = () => {
                   colors="primary:#ffffff,secondary:#ffffff"
                   style={{ width: '40px', height: '40px' }}>
                 </lord-icon></a>
-                <div className="w-[70%]"><b>We are located at </b><a className="hover:text-white" href="https://maps.app.goo.gl/QtJLjUZYvGJJbaeNA" target="_blank">Shed No. L-46, 47, 48 & M-49, 50, G.I.DC, Gandhidham (Kutch) 370201 Gujarat, India</a></div>
+                <div className="w-[70%]">We are located at <a className="hover:text-white" href="https://maps.app.goo.gl/QtJLjUZYvGJJbaeNA" target="_blank">Shed No. L-46, 47, 48 & M-49, 50, G.I.DC, Gandhidham (Kutch) 370201 Gujarat, India</a></div>
               </div>
               <hr className="w-[90%] bg-white" />
               <div className="flex gap-5 items-center">
@@ -234,11 +234,11 @@ const Contact = () => {
                 </div>
                 <div className="w-[70%] flex flex-col gap-1">
                   <div className="flex flex-col">
-                    <p>Contact <b>Sumeet Khodiyar</b> on</p>
+                    <p>Contact Sumeet Khodiyar on</p>
                     <a className="hover:text-white" href="tel:+91 98791 95121"> +91 98791 95121</a>
                   </div>
                   <div className="flex flex-col">
-                    <p>Contact <b>Jigar Khodiyar</b> on</p>
+                    <p>Contact Jigar Khodiyar on</p>
                     <a className="hover:text-white" href="tel:+91 98794 04009 ">+91 9879404009</a>
                   </div>
                 </div>
@@ -258,11 +258,11 @@ const Contact = () => {
                   </lord-icon>
                 </div>
                 <div className="w-[70%] flex flex-col">
-                  <div className="flex gap-1 flex-wrap"><b>Mail us on </b><a className="hover:text-white" href="mailto:info@urjaengg.com?subject=Hello&body=I%20am%20reaching%20out%20about...">
+                  <div className="flex gap-1 flex-wrap">Mail us on <a className="hover:text-white" href="mailto:info@urjaengg.com?subject=Hello&body=I%20am%20reaching%20out%20about...">
                     info@urjaengg.com
                   </a></div>
                   <div className="flex gap-1">
-                    <b>Or </b><a className="hover:text-white" href="mailto:jigar@urjaengg.com?subject=Hello&body=I%20am%20reaching%20out%20about...">
+                    Or <a className="hover:text-white" href="mailto:jigar@urjaengg.com?subject=Hello&body=I%20am%20reaching%20out%20about...">
                       jigar@urjaengg.com
                     </a></div>
                 </div>

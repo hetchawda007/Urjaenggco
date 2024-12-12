@@ -3,7 +3,6 @@ import { useState } from "react"
 import { Helmet } from "react-helmet-async"
 const About = () => {
   const [animate0, setanimate0] = useState(true)
-  const [animate1, setanimate1] = useState(true)
   const [animate2, setanimate2] = useState(true)
   const [animate3, setanimate3] = useState(true)
   const [animate4, setanimate4] = useState(true)
@@ -76,29 +75,21 @@ const About = () => {
         </motion.div>
 
         <div className="container flex flex-col gap-5 py-10 w-full">
-          <motion.h1
-            className="text-3xl text-center font-bold"
-            initial={animate1 ? { opacity: 0, scaleY: 0.8 } : { opacity: 1, scaleY: 1 }}
-            whileInView={{ opacity: 1, scaleY: 1, transition: { duration: 2, delay: 1 } }}
-            exit={{ opacity: 1, scaleY: 1 }}
-            onAnimationComplete={() => setanimate1(false)}
-          >
-            Welcome to Urja Engineering Co.
-          </motion.h1>
+
           <motion.div className="flex w-full my-8 items-center max-md:flex-col"
             initial={animate2 ? { opacity: 0, scaleY: 0.8 } : { opacity: 1, scaleY: 1 }}
             whileInView={{ opacity: 1, scaleY: 1, transition: { duration: 2, delay: 1 } }}
             exit={{ opacity: 1, scaleY: 1 }}
             onAnimationComplete={() => setanimate2(false)}
           >
-            <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">
-              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale" src="leadership.webp" alt="" />
+            <div className="flex justify-center object-cover w-[50%] max-md:w-full">
+              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl cursor-pointer scale" src="leadership.webp" alt="" />
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold max-md:pt-8">Urja Engineering Co.</h2>
+              <h2 className="text-2xl font-bold max-md:pt-8 text-blue-500 lato-bold">Urja Engineering Co.</h2>
 
-              <p className="font-semibold text-center">A company dedicated to Electrical Panel Board Manufacturing. We manufacture and supply a wide range of electrical panel boards. With the help of our inhouse quality control we are able to meet the industrial standard as well as the quality standard for exports in various countries. At Urja Engineering Co., our philosophy is to maintain the high standards of quality and reliability in industry in all aspects. We are also a renowned manufacturer of quality APFC, PCC, MCC, MLDB, DG SET Panels of various types. Centered in Gandhidham - Gujarat - India. This company was started with an objective of being a leader in panel board manufacturing and suppliers. Through consistent and regular supply of quality panel boards, the company has established itself as a reliable player in the industry with a wide experience.</p>
+              <p className="font-semibold text-[#59595A] roboto-regular">A company dedicated to Electrical Panel Board Manufacturing. We manufacture and supply a wide range of electrical panel boards. With the help of our inhouse quality control we are able to meet the industrial standard as well as the quality standard for exports in various countries. At Urja Engineering Co., our philosophy is to maintain the high standards of quality and reliability in industry in all aspects. We are also a renowned manufacturer of quality APFC, PCC, MCC, MLDB, DG SET Panels of various types. Centered in Gandhidham - Gujarat - India. This company was started with an objective of being a leader in panel board manufacturing and suppliers. Through consistent and regular supply of quality panel boards, the company has established itself as a reliable player in the industry with a wide experience.</p>
 
             </div>
           </motion.div>
@@ -112,13 +103,13 @@ const About = () => {
 
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold max-md:pt-8">Infrastructure</h2>
+              <h2 className="text-2xl font-bold max-md:pt-8 text-blue-500 lato-bold">Infrastructure</h2>
 
-              <p className="font-semibold text-center">With the help of well advanced & equipped in house fabrication setup, we are able to manufacture quality panels to meet clients requirements.The spacious workshop facilities with cutting edge technologies aids in the storing of procured material, electrical panels in abundance. This also helps in the delivery of the manufactured panels in a well-organized manner. Streamlining our manufacturing unit has further helped us take on large scale consignments with efficiency and deliver them within the stipulated time frame.</p>
+              <p className="font-semibold text-[#59595A] roboto-regular">With the help of well advanced & equipped in house fabrication setup, we are able to manufacture quality panels to meet clients requirements.The spacious workshop facilities with cutting edge technologies aids in the storing of procured material, electrical panels in abundance. This also helps in the delivery of the manufactured panels in a well-organized manner. Streamlining our manufacturing unit has further helped us take on large scale consignments with efficiency and deliver them within the stipulated time frame.</p>
 
             </div>
-            <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">
-              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale" src="infrastructure.webp" alt="" />
+            <div className="flex justify-center object-cover w-[50%] max-md:w-full">
+              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl cursor-pointer scale" src="infrastructure.webp" alt="" />
             </div>
           </motion.div>
 
@@ -137,12 +128,12 @@ const About = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-5 px-20 w-[90%] max-md:w-full max-md:px-5">
 
-                <h2 className="text-2xl font-bold  text-center">Our Vision</h2>
+                <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center">Our Vision</h2>
                 <div className="flex flex-col justify-center">
-                  <p className="font-semibold"><b>●</b> Urja Engineering Co. Must be most trusted, respected and preferred one for electrical panels.</p>
-                  <p className="font-semibold"><b>●</b> Urja Engineering Co. shall server as a role model and an inspiration to other panel manufacturing companies.</p>
-                  <p className="font-semibold"><b>●</b> Urja Engineering Co. name must widely be recognized as trustable and leading manufacturers of panel.</p>
-                  <p className="font-semibold"><b>●</b> Employees and Management of Urja Engineering Co. are two hands of a single body.</p>
+                  <p className="font-semibold flex gap-1 roboto-regular"><div>●</div> Urja Engineering Co. Must be most trusted, respected and preferred one for electrical panels.</p>
+                  <p className="font-semibold flex gap-1 roboto-regular"><div>●</div> Urja Engineering Co. shall server as a role model and an inspiration to other panel manufacturing companies.</p>
+                  <p className="font-semibold flex gap-1 roboto-regular"><div>●</div> Urja Engineering Co. name must widely be recognized as trustable and leading manufacturers of panel.</p>
+                  <p className="font-semibold flex gap-1 roboto-regular"><div>●</div> Employees and Management of Urja Engineering Co. are two hands of a single body.</p>
                 </div>
 
               </div>
@@ -161,11 +152,11 @@ const About = () => {
               </div>
               <div className="flex flex-col items-center justify-center gap-5 px-20 w-[80%] max-md:w-full max-md:px-5">
 
-                <h2 className="text-2xl font-bold  text-center">Our Mission</h2>
+                <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center">Our Mission</h2>
                 <div className="flex flex-col justify-center">
-                  <p className="font-semibold"><b>●</b> To provide proper satisfaction to our customers.</p>
-                  <p className="font-semibold"><b>●</b> To create a relish and vibrant workplace where employees are empowered and gain an wide opportunity for their growth</p>
-                  <p className="font-semibold"><b>●</b> To satisfy each and every employee for their contribution towards the company and to increase their moral.</p>
+                  <p className="font-semibold flex roboto-regular gap-1"><div>●</div> To provide proper satisfaction to our customers.</p>
+                  <p className="font-semibold flex roboto-regular gap-1"><div>●</div> To create a relish and vibrant workplace where employees are empowered and gain an wide opportunity for their growth</p>
+                  <p className="font-semibold flex roboto-regular gap-1"><div>●</div> To satisfy each and every employee for their contribution towards the company and to increase their moral.</p>
                 </div>
 
               </div>
@@ -180,14 +171,14 @@ const About = () => {
             onAnimationComplete={() => setanimate6(false)}
           >
 
-            <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 text-center max-md:w-full max-md:px-5">
+            <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:w-full max-md:px-5">
 
-              <h2 className="text-2xl font-bold max-md:pt-8">Teamwork</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold max-md:pt-8">Teamwork</h2>
 
-              <p className="font-semibold">We take pride in nurturing proficient and skilled team of professionals skilled in manufacturing varied electrical panels. Our professionals comprises of Engineers, Technicians, Researchers, Quality Auditors, Servicing Engineers and Sales & Marketing Professionals.Their dedicated service all through the years has enabled us in gaining the present status and recognized as one of the leading fabricators of electrical panels. Owing to their deep industrial knowledge and expertise we are able to manufacture the range in varying models as per the client specifications.</p>
+              <p className="font-semibold roboto-regular">We take pride in nurturing proficient and skilled team of professionals skilled in manufacturing varied electrical panels. Our professionals comprises of Engineers, Technicians, Researchers, Quality Auditors, Servicing Engineers and Sales & Marketing Professionals.Their dedicated service all through the years has enabled us in gaining the present status and recognized as one of the leading fabricators of electrical panels. Owing to their deep industrial knowledge and expertise we are able to manufacture the range in varying models as per the client specifications.</p>
             </div>
-            <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">
-              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale" src="teamwork.webp" alt="" />
+            <div className="flex justify-center object-cover w-[50%] max-md:w-full">
+              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl cursor-pointer scale" src="teamwork.webp" alt="" />
             </div>
           </motion.div>
 
@@ -217,16 +208,16 @@ const About = () => {
               onAnimationComplete={() => setanimate8(false)}
             >
               <div>
-                <img className="h-[190px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-10.webp" alt="" />
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-10.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-30.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-30.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-2.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-2.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-15.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-15.webp" alt="" />
               </div>
             </motion.div>
 
@@ -237,16 +228,16 @@ const About = () => {
               onAnimationComplete={() => setanimate9(false)}
             >
               <div>
-                <img className="h-[190px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-20.webp" alt="" />
+                <img className="h-[178px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-20.webp" alt="" />
               </div>
               <div>
-                <img className="h-[190px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-19.webp" alt="" />
+                <img className="h-[178px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-19.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-28.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-28.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-29.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-29.webp" alt="" />
               </div>
             </motion.div>
 
@@ -257,16 +248,16 @@ const About = () => {
               onAnimationComplete={() => setanimate10(false)}
             >
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-1.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-1.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-32.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-32.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-5.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-5.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-6.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-6.webp" alt="" />
               </div>
             </motion.div>
 
@@ -277,16 +268,16 @@ const About = () => {
               onAnimationComplete={() => setanimate11(false)}
             >
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-7.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-7.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-8.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-8.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-12.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-12.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-13.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-13.webp" alt="" />
               </div>
             </motion.div>
 
@@ -297,16 +288,16 @@ const About = () => {
               onAnimationComplete={() => setanimate12(false)}
             >
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-33.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-33.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-17.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-17.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-18.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-18.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-16.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-16.webp" alt="" />
               </div>
             </motion.div>
 
@@ -317,16 +308,16 @@ const About = () => {
               onAnimationComplete={() => setanimate13(false)}
             >
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-22.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-22.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-24.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-24.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-23.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-23.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-34.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-34.webp" alt="" />
               </div>
             </motion.div>
 
@@ -337,16 +328,16 @@ const About = () => {
               onAnimationComplete={() => setanimate14(false)}
             >
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-25.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-25.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-26.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-26.webp" alt="" />
               </div>
               <div>
-                <img className="h-[340px] shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-27.webp" alt="" />
+                <img className="h-[320px] shadow-2xl border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-27.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shadow-2xl border border-black scale cursor-pointer w-64 object-fill scale rounded-xl" src="gallery-31.webp" alt="" />
+                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-31.webp" alt="" />
               </div>
             </motion.div>
 

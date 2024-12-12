@@ -77,9 +77,9 @@ const Services = () => {
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold text-center max-md:mt-8">Electrical Panel Board Manufacturing</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center max-md:mt-8">Electrical Panel Board Manufacturing</h2>
 
-              <p className="font-semibold text-center">Urja Engineering Co. excels in the manufacturing of a comprehensive range of electrical panel boards, including Power Control Centers (PCC), Motor Control Centers (MCC), and Distribution Boards. Our products are engineered to meet both national and international quality standards, ensuring safety, reliability, and efficiency. Equipped with advanced technology and rigorous quality testing, our panels are designed to handle complex power distribution needs, making them ideal for industrial, commercial, and export purposes.</p>
+              <p className="text-[#59595A] roboto-regular">Urja Engineering Co. excels in the manufacturing of a comprehensive range of electrical panel boards, including Power Control Centers (PCC), Motor Control Centers (MCC), and Distribution Boards. Our products are engineered to meet both national and international quality standards, ensuring safety, reliability, and efficiency. Equipped with advanced technology and rigorous quality testing, our panels are designed to handle complex power distribution needs, making them ideal for industrial, commercial, and export purposes.</p>
 
             </div>
           </motion.div>
@@ -93,9 +93,9 @@ const Services = () => {
 
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold text-center max-md:mt-8">Installation of DP Structures</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center max-md:mt-8">Installation of DP Structures</h2>
 
-              <p className="font-semibold text-center">We provide professional installation services for Double Pole (DP) structures, which are critical components in power distribution networks. Our experienced team ensures that each DP structure is installed with precision, adhering to all safety regulations. This service includes the installation of poles, cross arms, and conductors, guaranteeing optimal performance and longevity. Whether it’s a new setup or an upgrade, our solutions are designed to support high-capacity power transmission efficiently.</p>
+              <p className="text-[#59595A] roboto-regular">We provide professional installation services for Double Pole (DP) structures, which are critical components in power distribution networks. Our experienced team ensures that each DP structure is installed with precision, adhering to all safety regulations. This service includes the installation of poles, cross arms, and conductors, guaranteeing optimal performance and longevity. Whether it’s a new setup or an upgrade, our solutions are designed to support high-capacity power transmission efficiently.</p>
 
             </div>
             <div className="flex justify-center object-cover  w-[50%] max-md:w-full cursor-pointer">
@@ -114,9 +114,9 @@ const Services = () => {
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold text-center max-md:mt-8">Cable Installation Services</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center max-md:mt-8">Cable Installation Services</h2>
 
-              <p className="font-semibold text-center">Urja Engineering Co. offers expert cable installation services, ranging from underground cabling to overhead lines. We handle everything from planning and trenching to installation and testing, ensuring a smooth and efficient power supply. Our team specializes in laying high-tension (HT) and low-tension (LT) cables, adhering to industry best practices to ensure durability and minimal power loss. With our advanced tools and methodologies, we deliver seamless and safe cabling solutions tailored to your specific requirements.</p>
+              <p className="text-[#59595A] roboto-regular">Urja Engineering Co. offers expert cable installation services, ranging from underground cabling to overhead lines. We handle everything from planning and trenching to installation and testing, ensuring a smooth and efficient power supply. Our team specializes in laying high-tension (HT) and low-tension (LT) cables, adhering to industry best practices to ensure durability and minimal power loss. With our advanced tools and methodologies, we deliver seamless and safe cabling solutions tailored to your specific requirements.</p>
 
             </div>
           </motion.div>
@@ -130,9 +130,9 @@ const Services = () => {
 
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold text-center max-md:mt-8">Supply of Transformers and Vacuum Circuit Breakers (VCBs)</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center max-md:mt-8">Supply of Transformers and Vacuum Circuit Breakers (VCBs)</h2>
 
-              <p className="font-semibold text-center">We are a trusted supplier of high-performance transformers and vacuum circuit breakers. Our transformers, available in various capacities, are built for optimal energy efficiency and are suitable for industrial and utility applications. VCBs are a crucial component in managing high-voltage electrical systems, providing reliable protection against faults and overcurrents. Our products are rigorously tested and certified to ensure maximum safety and performance, meeting the diverse needs of our clients.</p>
+              <p className="text-[#59595A] roboto-regular">We are a trusted supplier of high-performance transformers and vacuum circuit breakers. Our transformers, available in various capacities, are built for optimal energy efficiency and are suitable for industrial and utility applications. VCBs are a crucial component in managing high-voltage electrical systems, providing reliable protection against faults and overcurrents. Our products are rigorously tested and certified to ensure maximum safety and performance, meeting the diverse needs of our clients.</p>
             </div>
             <div className="flex justify-center object-cover  w-[50%] max-md:w-full cursor-pointer">
               <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale scale" src="transformer.webp" alt="" />
@@ -150,14 +150,14 @@ const Services = () => {
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
-              <h2 className="text-2xl font-bold text-center max-md:mt-8">Supply of Switchgear and HT & LT Dealings</h2>
+              <h2 className="text-2xl font-bold text-blue-500 lato-bold text-center max-md:mt-8">Supply of Switchgear and HT & LT Dealings</h2>
 
-              <p className="font-semibold text-center">At Urja Engineering Co. we provide a wide range of switchgear solutions, including circuit breakers, relays, and isolators, tailored for HT and LT systems. Our products are designed for seamless integration into power systems, offering superior control and protection. Our expertise in managing power distribution projects ensures reliable and efficient service delivery.</p>
+              <p className="text-[#59595A] roboto-regular">At Urja Engineering Co. we provide a wide range of switchgear solutions, including circuit breakers, relays, and isolators, tailored for HT and LT systems. Our products are designed for seamless integration into power systems, offering superior control and protection. Our expertise in managing power distribution projects ensures reliable and efficient service delivery.</p>
 
             </div>
           </motion.div>
 
-          <motion.div className="text-xl text-center py-5 font-bold w-[60%] mx-auto max-md:w-full max-md:px-2"
+          <motion.div className="text-xl text-center text-blue-500 lato-bold py-5 font-bold w-[60%] mx-auto max-md:w-full max-md:px-2"
             initial={animate7 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
             whileInView={{ opacity: 1, scale: 1, transition: { duration: 2 } }}
             exit={{ opacity: 1, scale: 1 }}
