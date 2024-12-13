@@ -73,13 +73,13 @@ const Products = () => {
         >
           <div className="carousel-inner ">
             <div className="carousel-item h-96 active max-md:h-40">
-              <img className="h-auto w-full" src="product-banner-1.webp" alt="First slide" />
+              <img className="h-auto w-full" src="home-banner-3.webp" alt="First slide" />
             </div>
             <div className="carousel-item h-96 max-md:h-40">
-              <img className="h-auto w-full" src="product-banner-2.webp" alt="Second slide" />
+              <img className="h-auto w-full" src="product-banner-1.webp" alt="Second slide" />
             </div>
             <div className="carousel-item h-96 max-md:h-40">
-              <img className="h-auto w-full" src="product-banner-3.webp" alt="Third slide" />
+              <img className="h-auto w-full" src="product-banner-2.webp" alt="Third slide" />
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -108,6 +108,7 @@ const Products = () => {
               whileInView={{ opacity: 1, scale: 1, transition: { duration: 1.5 } }}
               exit={{ opacity: 1, scale: 1 }}
               onAnimationComplete={() => setanimate4(false)}
+              drag
             >
               <img className="w-96 scale cursor-pointer max-md:w-80" src="logo.webp" alt="" />
             </motion.div>
