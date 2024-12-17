@@ -67,7 +67,7 @@ const Home = () => {
                         <li className="cursor-pointer" data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                     </ol>
                     <div className="carousel-inner text-white">
-                        <div className="carousel-item bg-blr bg-[url('home-banner-3.webp')] bg-center bg-cover w-full active h-[550px] max-md:h-40">
+                        <div className="carousel-item bg-blr bg-[url('/home-banner-3.webp')] bg-center bg-cover w-full active h-[550px] max-md:h-40">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
                             <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
                                 <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:gap-0.5"
@@ -90,7 +90,7 @@ const Home = () => {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="carousel-item w-full bg-[url('banner-4.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                        <div className="carousel-item w-full bg-[url('/banner-4.webp')] bg-center bg-cover h-[550px] max-md:h-40">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
                             <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
                                 <motion.div className="flex flex-col justify-evenly gap-5 max-md:gap-2"
@@ -124,7 +124,7 @@ const Home = () => {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="carousel-item w-full bg-[url('home-banner-1.webp')] bg-cover bg-center ver h-[550px] max-md:h-40">
+                        <div className="carousel-item w-full bg-[url('/home-banner-1.webp')] bg-cover bg-center ver h-[550px] max-md:h-40">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
                             <div className="flex h-full px-32 justify-evenly items-center cursor-default max-md:px-6">
                                 <motion.div className="flex flex-col gap-5 max-md:gap-2"
@@ -153,7 +153,7 @@ const Home = () => {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="carousel-item w-full bg-[url('banner-6.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                        <div className="carousel-item w-full bg-[url('/banner-6.webp')] bg-center bg-cover h-[550px] max-md:h-40">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
                             <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-6">
                                 <motion.div className="flex flex-col gap-14 max-md:gap-1 max-md:px-8"
@@ -173,7 +173,7 @@ const Home = () => {
 
                             </div>
                         </div>
-                        <div className="carousel-item w-full bg-[url('banner-2.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                        <div className="carousel-item w-full bg-[url('/banner-2.webp')] bg-center bg-cover h-[550px] max-md:h-40">
                             <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
                             <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
                                 <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:gap-0.5"
@@ -188,9 +188,9 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-64 w-auto max-md:h-20" src="logo.png" alt="pannel" 
-                                    whileHover={{ scale: 1.1 }}
-                                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                    <motion.img className="h-64 w-auto max-md:h-20" src="logo.png" alt="pannel"
+                                        whileHover={{ scale: 1.1 }}
+                                        drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />
                                 </motion.div>
                             </div>

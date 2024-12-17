@@ -62,7 +62,7 @@ const About = () => {
           onAnimationComplete={() => setanimate0(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item bg-blr bg-[url('about-banner-1.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+            <div className="carousel-item bg-blr bg-[url('/about-banner-1.webp')] bg-cover w-full active h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:w-full max-md:gap-2"
@@ -76,7 +76,7 @@ const About = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="carousel-item w-full bg-[url('about-banner-3.webp')] bg-cover h-[550px] max-md:h-40">
+            <div className="carousel-item w-full bg-[url('/about-banner-3.webp')] bg-cover h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-around items-center cursor-default  max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:w-full max-md:gap-2"
@@ -86,11 +86,11 @@ const About = () => {
                 >
                   <div className="lato-bold text-blue-600 text-5xl max-md:text-sm">Infrastructure</div>
                   <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:w-full max-md:leading-normal max-md:text-[8px]">
-                  We boasts a state-of-the-art in-house fabrication setup, enabling the production of high-quality panels tailored to client needs. Our spacious and well-equipped workshop, combined with advanced technology, ensures efficient storage, streamlined manufacturing, and timely delivery of large-scale consignments.</div>
+                    We boasts a state-of-the-art in-house fabrication setup, enabling the production of high-quality panels tailored to client needs. Our spacious and well-equipped workshop, combined with advanced technology, ensures efficient storage, streamlined manufacturing, and timely delivery of large-scale consignments.</div>
                 </motion.div>
               </div>
             </div>
-            <div className="carousel-item w-full bg-[url('about-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
+            <div className="carousel-item w-full bg-[url('/about-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-around items-center cursor-default  max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:w-full max-md:gap-2"
@@ -100,7 +100,7 @@ const About = () => {
                 >
                   <div className="lato-bold text-blue-600 text-5xl max-md:text-sm">Teamwork</div>
                   <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:w-full max-md:leading-normal max-md:text-[8px]">
-                  Our success is driven by a proficient team of engineers, technicians, quality auditors, and sales professionals. This collective dedication has established us as a trusted leader in panel fabrication.</div>
+                    Our success is driven by a proficient team of engineers, technicians, quality auditors, and sales professionals. This collective dedication has established us as a trusted leader in panel fabrication.</div>
                 </motion.div>
               </div>
             </div>

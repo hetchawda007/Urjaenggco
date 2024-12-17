@@ -135,7 +135,7 @@ const Contact = () => {
           onAnimationComplete={() => setanimate2(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item bg-blr bg-[url('contact-banner-2.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+            <div className="carousel-item bg-blr bg-[url('/contact-banner-2.webp')] bg-cover w-full active h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
                 <motion.div className="flex items-center flex-col gap-5 max-md:gap-2"
@@ -145,7 +145,7 @@ const Contact = () => {
                 >
                   <div className="lato-bold text-neutral-300 text-5xl max-md:text-xl"><span className="text-blue-600">Contact </span>Us</div>
                   <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:leading-normal max-md:w-full">
-                  Reach out to Urja Engineering Co. for inquiries, support, or collaboration. We’re here to assist with all your electrical panel board and service needs. Contact us today to explore tailored solutions for your requirements.</div>
+                    Reach out to Urja Engineering Co. for inquiries, support, or collaboration. We’re here to assist with all your electrical panel board and service needs. Contact us today to explore tailored solutions for your requirements.</div>
                 </motion.div>
               </div>
             </div>

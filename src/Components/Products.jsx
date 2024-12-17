@@ -81,7 +81,7 @@ const Products = () => {
           onAnimationComplete={() => setanimate2(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item bg-blr bg-[url('home-banner-3.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+            <div className="carousel-item bg-blr bg-[url('/home-banner-3.webp')] bg-cover w-full active h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
@@ -104,7 +104,7 @@ const Products = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="carousel-item w-full bg-[url('product-banner-1.webp')] bg-cover h-[550px] max-md:h-40">
+            <div className="carousel-item w-full bg-[url('/product-banner-1.webp')] bg-cover h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
@@ -127,7 +127,7 @@ const Products = () => {
                 </motion.div>
               </div>
             </div>
-            <div className="carousel-item w-full bg-[url('product-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
+            <div className="carousel-item w-full bg-[url('/product-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
               <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
               <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
                 <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
