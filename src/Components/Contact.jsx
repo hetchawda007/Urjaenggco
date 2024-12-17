@@ -1,6 +1,6 @@
 import { useState } from "react"
 import axios from "axios"
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async"
@@ -8,8 +8,18 @@ const Contact = () => {
 
   const [animate1, setanimate1] = useState(true)
   const [animate2, setanimate2] = useState(true)
+  const [animate3, setanimate3] = useState(true)
   const [animate6, setanimate6] = useState(true)
-
+  const handleanimate = () => {
+    setInterval(() => {
+      setanimate3(false)
+    }, 2000);
+  }
+  const animate = () => {
+    setInterval(() => {
+      setanimate1(false)
+    }, 1000);
+  }
   const [form, setform] = useState({ name: "", number: "", email: "", company: "", message: "" })
 
   const handlechange = (e) => {
@@ -94,73 +104,57 @@ const Contact = () => {
       />
 
       <ToastContainer />
-      <motion.div className="w-[98.9vw] absolute h-screen overflow-y-hidden top-0 z-20"
-        style={{
-          visibility: animate1 ? "visible" : "hidden"
-        }}
-      >
-        <motion.div className="w-full bg-black h-1/2"
-          initial={{ y: 0 }}
-          animate={{ y: -800 }}
-          exit={{ y: 0 }}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-        <motion.div className="w-full bg-black h-1/2"
-          initial={{ y: 0 }}
-          animate={{ y: 800 }}
-          exit={{ y: 0 }}
-          onAnimationComplete={() => setanimate1(false)}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-      </motion.div>
-      <motion.div className="w-[98.9vw] flex absolute h-screen overflow-x-hidden overflow-y-hidden top-0 z-20"
-        style={{
-          visibility: animate1 ? "visible" : "hidden"
-        }}
-      >
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: -800 }}
-          exit={{ x: 0 }}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: 800 }}
-          exit={{ x: 0 }}
-          onAnimationComplete={() => setanimate1(false)}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-      </motion.div>
+      {animate1 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
+        initial={{ width: 0 }}
+        animate={{ width: '100vw', ease: 'easeInOut' }}
+        transition={{ duration: 2, type: 'spring', stiffness: 100, damping: 10 }}
+        onAnimationComplete={animate}
+      ></motion.div>}
+      <AnimatePresence>
+        {animate3 && (
+          <motion.div
+            key={1}
+            className="fixed z-20 top-0 h-screen w-screen bg-white flex flex-col items-center justify-center"
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+            onAnimationComplete={handleanimate}
+          >
+            <img className="h-40 w-auto" src="logo.webp" alt="" />
+            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <motion.div className="flex flex-col items-center gap-8 overflow-x-hidden">
 
-        <motion.div id="carouselExampleControls" className="carousel slide w-full" data-ride="carousel"
+        <motion.div id="carouselExampleControls" className="carousel slide w-full" data-interval="8000" data-ride="carousel"
           initial={animate2 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
           whileInView={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
           exit={{ opacity: 1, scale: 1 }}
           onAnimationComplete={() => setanimate2(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item h-96 active max-md:h-40">
-              <img className="h-auto w-full object-fill" src="contact.webp" alt="First slide" />
-            </div>
-            <div className="carousel-item h-96  max-md:h-40">
-              <img className="h-auto w-full object-fill" src="contact-banner-2.webp" alt="Second slide" />
-            </div>
-            <div className="carousel-item h-96  max-md:h-40">
-              <img className="h-auto w-full object-fill" src="contact-banner-1.webp" alt="Third slide" />
+            <div className="carousel-item bg-blr bg-[url('contact-banner-2.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
+                <motion.div className="flex items-center flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-xl"><span className="text-blue-600">Contact </span>Us</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:leading-normal max-md:w-full">
+                  Reach out to Urja Engineering Co. for inquiries, support, or collaboration. We’re here to assist with all your electrical panel board and service needs. Contact us today to explore tailored solutions for your requirements.</div>
+                </motion.div>
+              </div>
             </div>
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a className="carousel-control-prev flex items-center justify-center ml-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-prev max-md:mt-16 max-md:ml-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a className="carousel-control-next flex items-center justify-center mr-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-next max-md:mt-16 max-md:mr-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>

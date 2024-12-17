@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom"
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { useState } from "react"
 import Marquee from "react-fast-marquee"
 import { Helmet } from "react-helmet-async"
 const Home = () => {
-
+    const handleanimate = () => {
+        setInterval(() => {
+            setanimate9(false)
+        }, 2000);
+    }
+    const animate = () => {
+        setInterval(() => {
+            setanimate11(false)
+        }, 1000);
+    }
     const [animate1, setanimate1] = useState(true)
     const [animate2, setanimate2] = useState(true)
     const [animate3, setanimate3] = useState(true)
@@ -15,6 +24,7 @@ const Home = () => {
     const [animate8, setanimate8] = useState(true)
     const [animate9, setanimate9] = useState(true)
     const [animate10, setanimate10] = useState(true)
+    const [animate11, setanimate11] = useState(true)
 
     return (
         <>
@@ -22,79 +32,175 @@ const Home = () => {
                 <title>Home - Urja Engg Co.</title>
                 <meta name="description" content="Urja Engg Co specializes in manufacturing and supplying a wide range of electrical panel boards. We ensure top-notch quality for industrial and export standards." />
             </Helmet>
-
-            <motion.div className="w-[98.9vw] absolute h-screen overflow-y-hidden top-0 z-20"
-                style={{
-                    visibility: animate9 ? "visible" : "hidden"
-                }}
-            >
-                <motion.div className="w-full bg-black h-1/2"
-                    initial={{ y: 0 }}
-                    animate={{ y: -800 }}
-                    exit={{ y: 0 }}
-                    transition={{ duration: 2, ease: "circInOut" }}
-                >
-                </motion.div>
-                <motion.div className="w-full bg-black h-1/2"
-                    initial={{ y: 0 }}
-                    animate={{ y: 800 }}
-                    exit={{ y: 0 }}
-                    onAnimationComplete={() => setanimate9(false)}
-                    transition={{ duration: 2, ease: "circInOut" }}
-                >
-                </motion.div>
-            </motion.div>
-            <motion.div className="w-[98.9vw] flex absolute h-screen overflow-x-hidden overflow-y-hidden top-0 z-20"
-                style={{
-                    visibility: animate9 ? "visible" : "hidden"
-                }}
-            >
-                <motion.div className="w-1/2 bg-black h-full"
-                    initial={{ x: 0 }}
-                    animate={{ x: -800 }}
-                    exit={{ x: 0 }}
-                    transition={{ duration: 2, ease: "circInOut" }}
-                >
-                </motion.div>
-                <motion.div className="w-1/2 bg-black h-full"
-                    initial={{ x: 0 }}
-                    animate={{ x: 800 }}
-                    exit={{ x: 0 }}
-                    onAnimationComplete={() => setanimate9(false)}
-                    transition={{ duration: 2, ease: "circInOut" }}
-                >
-                </motion.div>
-            </motion.div>
+            {animate11 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
+                initial={{ width: 0 }}
+                animate={{ width: '100vw', ease: 'easeInOut' }}
+                transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+                onAnimationComplete={animate}
+            ></motion.div>}
+            <AnimatePresence>
+                {animate9 && (
+                    <motion.div
+                        key="loading-screen"
+                        className="fixed z-20 top-0 h-screen w-screen bg-white flex flex-col items-center justify-center"
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+                        onAnimationComplete={handleanimate}
+                    >
+                        <img className="h-40 w-auto" src="logo.webp" alt="" />
+                        <div className="text-purple-800 font-semibold lato-bold">Leading Leading Pannel Board Manufacturer</div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <motion.div>
-                <motion.div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel"
+                <motion.div id="carouselExampleIndicators" className="carousel slide" data-interval="8000" data-ride="carousel"
                     initial={animate1 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
                     whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
-                    exit={{ opacity: 1, scale: 1 }}
                     onAnimationComplete={() => setanimate1(false)}
                 >
                     <ol className="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active cursor-pointer"></li>
+                        <li className="cursor-pointer" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li className="cursor-pointer" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li className="cursor-pointer" data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li className="cursor-pointer" data-target="#carouselExampleIndicators" data-slide-to="4"></li>
                     </ol>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active h-96 max-md:h-40">
-                            <img className="h-auto w-full" src="home-banner-1.webp" alt="First slide" />
+                    <div className="carousel-inner text-white">
+                        <div className="carousel-item bg-blr bg-[url('home-banner-3.webp')] bg-center bg-cover w-full active h-[550px] max-md:h-40">
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+                            <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
+                                <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:gap-0.5"
+                                    initial={{ opacity: 0, x: -100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                                >
+                                    <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Urja<span className="text-blue-600"> Engineering</span> Company</div>
+                                    <div className="roboto-regular text-lg max-md:text-[8px] max-md:leading-3 font-thin text-neutral-200 leading-8 w-[80%]">Urja Engineering Company is a trusted name in electrical solutions. We specialize in designing and manufacturing APFC Panels, PCC Panels, MCC Panels, DG Set Panels, MLDB Panels, Ligntning Panel & Ats panels.</div>
+                                </motion.div>
+                                <motion.div className="w-[30%] flex justify-end"
+                                    initial={{ opacity: 0, x: 100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                                >
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-4.webp" alt="pannel"
+                                        whileHover={{ scale: 1.1 }}
+                                        drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                    />
+                                </motion.div>
+                            </div>
                         </div>
-                        <div className="carousel-item h-96 max-md:h-40">
-                            <img className="h-auto w-full" src="home-banner-3.webp" alt="Second slide" />
+                        <div className="carousel-item w-full bg-[url('banner-4.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+                            <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
+                                <motion.div className="flex flex-col justify-evenly gap-5 max-md:gap-2"
+                                    initial={{ opacity: 0, x: -100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                                >
+                                    <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Why Choose <span className="text-blue-600"> Us?</span></div>
+                                    <div className="roboto-regular text-lg max-md:text-[2px] text-neutral-200 flex flex-col gap-2 max-md:gap-1">
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">
+                                            ➡️ Innovative Engineering</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">
+                                            ➡️ Top-Notch Quality</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">
+                                            ➡️ Experienced Team</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">
+                                            ➡️ Timely Delivery</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">
+                                            ➡️ Customer-Centric Approach</div>
+                                    </div>
+                                </motion.div>
+                                <motion.div className="flex justify-end"
+                                    initial={{ opacity: 0, x: 100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                                >
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-5.webp" alt="pannel"
+                                        whileHover={{ scale: 1.1 }}
+                                        drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                    />
+                                </motion.div>
+                            </div>
                         </div>
-                        <div className="carousel-item h-96 max-md:h-40">
-                            <img className="h-auto w-full" src="home-banner-2.webp" alt="Third slide" />
+                        <div className="carousel-item w-full bg-[url('home-banner-1.webp')] bg-cover bg-center ver h-[550px] max-md:h-40">
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+                            <div className="flex h-full px-32 justify-evenly items-center cursor-default max-md:px-6">
+                                <motion.div className="flex flex-col gap-5 max-md:gap-2"
+                                    initial={{ opacity: 0, x: -100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                                >
+                                    <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Our <span className="text-blue-600"> Services</span></div>
+                                    <div className="roboto-regular text-lg text-neutral-200 flex flex-col gap-2 max-md:gap-1">
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">➡️ Electrical Panel Board Manufacturing</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">➡️ Installation of DP Structures</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">➡️ Cable Installation Services</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">➡️ Supply of Transformers</div>
+                                        <div className="max-md:text-[8px] max-md:h-fit max-md:leading-normal">➡️ Supply of Switchgear and HT & LT Dealings</div>
+                                    </div>
+                                </motion.div>
+                                <motion.div className="w-[30%] flex justify-end"
+                                    initial={{ opacity: 0, x: 100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                                >
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-6.webp" alt="pannel"
+                                        whileHover={{ scale: 1.1 }}
+                                        drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                    />
+                                </motion.div>
+                            </div>
+                        </div>
+                        <div className="carousel-item w-full bg-[url('banner-6.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+                            <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-6">
+                                <motion.div className="flex flex-col gap-14 max-md:gap-1 max-md:px-8"
+                                    initial={{ opacity: 0, x: -100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                                >
+                                    <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Our <span className="text-blue-600">Mission</span></div>
+                                    <div className="roboto-regular text-lg max-md:text-[2px] text-neutral-200 flex flex-col gap-2 max-md:gap-1">
+                                        <div className="text-xl max-md:text-[10px] max-md:leading-normal">➡️ To provide proper satisfaction to our customers.</div>
+                                        <div className="text-xl max-md:text-[10px] max-md:leading-normal">➡️ Encourage creativity and innovation to deliver better solutions.</div>
+                                        <div className="text-xl max-md:text-[10px] max-md:leading-normal">➡️ Strive to exceed customer expectations with quality products and services.</div>
+                                        <div className="text-xl max-md:text-[10px] max-md:leading-normal">➡️ To satisfy each and every employee for their contribution towards the company and to increase their moral.</div>
+                                        <div className="text-xl max-md:hidden">➡️ To create a relish and vibrant workplace where employees are empowered and gain an wide opportunity for their growth.</div>
+                                    </div>
+                                </motion.div>
+
+                            </div>
+                        </div>
+                        <div className="carousel-item w-full bg-[url('banner-2.webp')] bg-center bg-cover h-[550px] max-md:h-40">
+                            <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+                            <div className="flex h-full px-32 justify-around items-center cursor-default max-md:px-6">
+                                <motion.div className="w-[60%] flex flex-col items-center gap-5 max-md:gap-0.5"
+                                    initial={{ opacity: 0, x: -100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                                >
+                                    <div className="lato-bold text-neutral-300 w-[65%] tracking-wide leading-tight font-bold text-5xl max-md:text-sm">Building <span className="text-blue-600">Modern</span> Electrical Solutions</div>
+                                </motion.div>
+                                <motion.div className="w-[30%] flex justify-end max-md:justify-center"
+                                    initial={{ opacity: 0, x: 100 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                                >
+                                    <motion.img className="h-64 w-auto max-md:h-20" src="logo.png" alt="pannel" 
+                                    whileHover={{ scale: 1.1 }}
+                                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                                    />
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
-                    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a className="flex items-center justify-center ml-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-prev max-md:mt-16 max-md:ml-2 max-md:p-2" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Previous</span>
                     </a>
-                    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a className="flex items-center justify-center mr-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-next max-md:mt-16 max-md:mr-2 max-md:p-2" href="#carouselExampleIndicators" role="button" data-slide="next">
                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span className="sr-only">Next</span>
                     </a>
                 </motion.div>
                 <div className='flex flex-col gap-5 my-14  max-md:hidden'>

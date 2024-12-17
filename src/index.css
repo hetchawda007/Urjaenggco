@@ -6,7 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Zen+Antique&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -20,54 +20,48 @@
   transform: scale(1.1, 1.1);
 }
 
-.rotate-1{
+.rotate-1 {
   transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
   transition: transform 0.5s ease;
 }
 
-.rotate-2{
+.rotate-2 {
   transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
   transition: transform 0.5s ease;
 }
 
-.rotate-3{
+.rotate-3 {
   transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
   transition: transform 0.5s ease;
 }
 
-.rotate-4{
+.rotate-4 {
   transform: perspective(1) scaleZ(1) rotateY(0deg) rotateX(0deg);
   transition: transform 0.5s ease;
 }
 
-.rotate-1:hover{
+.rotate-1:hover {
   transform: perspective(500px) scaleZ(1.2) rotateY(30deg);
 }
 
-.rotate-2:hover{
+.rotate-2:hover {
   transform: perspective(500px) scaleZ(1.2) rotateX(30deg);
 }
-  
-.rotate-3:hover{
+
+.rotate-3:hover {
   transform: perspective(500px) scaleZ(1.2) rotateX(-30deg);
 }
 
-.rotate-4:hover{
+.rotate-4:hover {
   transform: perspective(500px) scaleZ(1.2) rotateY(-30deg);
 }
 
-.blr{
+.blr {
   backdrop-filter: blur(5px);
 }
 
-.shadow{
+.shadow {
   box-shadow: 1px 1px 1px black;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
 }
 
 .roboto-regular {
@@ -82,6 +76,36 @@
   font-style: normal;
 }
 
-.shd{
+.shd {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3080e8; /* Blue thumb */
+  border-radius: 6px; /* Rounded edges for the scrollbar */
+  border: 2px solid #f1f1f1; /* Space between thumb and track */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: #3080e8 #f1f1f1; /* Thumb color, track color */
+}
+
+/* For Internet Explorer/Edge Legacy (Fallback) */
+body {
+  -ms-overflow-style: none; /* Hides the scrollbar in IE */
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for better UX */
 }

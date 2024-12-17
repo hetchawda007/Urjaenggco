@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { useState } from "react"
 import { Helmet } from "react-helmet-async"
 const Services = () => {
@@ -9,56 +9,129 @@ const Services = () => {
   const [animate5, setanimate5] = useState(true)
   const [animate6, setanimate6] = useState(true)
   const [animate7, setanimate7] = useState(true)
+  const [animate8, setanimate8] = useState(true)
+  const handleanimate = () => {
+    setInterval(() => {
+      setanimate1(false)
+    }, 2000);
+  }
+  const animate = () => {
+    setInterval(() => {
+      setanimate8(false)
+    }, 1000);
+  }
   return (
     <>
       <Helmet>
         <title>Services - Urja Engg Co.</title>
         <meta name="description" content="Explore the services offered by Urja Engineering Co., including custom design, manufacturing, and support for high-quality electrical panel boards tailored to meet diverse industrial needs." />
       </Helmet>
-      <motion.div className="w-[98.9vw] flex absolute h-screen overflow-x-hidden overflow-y-hidden top-0 z-20"
-        style={{
-          visibility: animate1 ? "visible" : "hidden"
-        }}
-      >
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: -800 }}
-          exit={{ x: 0 }}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: 800 }}
-          exit={{ x: 0 }}
-          onAnimationComplete={() => setanimate1(false)}
-          transition={{ duration: 2, ease: "backOut" }}
-        >
-        </motion.div>
-      </motion.div>
+      {animate8 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
+        initial={{ width: 0 }}
+        animate={{ width: '100vw', ease: 'easeInOut' }}
+        transition={{ duration: 2, type: 'spring', stiffness: 100, damping: 10 }}
+        onAnimationComplete={animate}
+      ></motion.div>}
+      <AnimatePresence>
+        {animate1 && (
+          <motion.div
+            key={1}
+            className="fixed z-20 top-0 h-screen w-screen bg-white flex flex-col items-center justify-center"
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+            onAnimationComplete={handleanimate}
+          >
+            <img className="h-40 w-auto" src="logo.webp" alt="" />
+            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div>
-        <motion.div id="carouselExampleControls" className="carousel slide" data-ride="carousel"
-          initial={animate2 ? { opacity: 0, scaleX: 0.8 } : { opacity: 1, scaleX: 1 }}
-          whileInView={{ opacity: 1, scaleX: 1, transition: { duration: 1 } }}
-          exit={{ opacity: 1, scaleX: 1 }}
+        <motion.div id="carouselExampleControls" className="carousel slide" data-interval="8000" data-ride="carousel"
+          initial={animate2 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
           onAnimationComplete={() => setanimate2(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item h-96 active max-md:h-40">
-              <img className="h-auto w-full" src="service-banner-1.webp" alt="First slide" />
+            <div className="carousel-item bg-blr bg-[url('service-banner-1.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-10">
+                <motion.div className="w-[60%] flex items-center flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Advanced <span className="text-blue-600">Panel</span> Manufacturing</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:w-full max-md:leading-normal">
+                    Urja Engineering Co. specializes in crafting a wide range of electrical panel boards, including PCC, MCC, and Distribution Boards. Built to meet global quality standards, our panels ensure safety, efficiency, and reliability. Designed for complex power needs, they serve industrial, commercial, and export applications seamlessly.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-6.webp" alt="pannel"
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                  />
+                </motion.div>
+              </div>
             </div>
-            <div className="carousel-item h-96  max-md:h-40">
-              <img className="h-auto w-full" src="service-banner-2.webp" alt="Second slide" />
+            <div className="carousel-item w-full bg-[url('service-banner-3.webp')] bg-cover h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-10">
+                <motion.div className="w-[60%] flex items-center flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Dp <span className="text-blue-600">Structure </span>Installing</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:w-full max-md:leading-normal">
+                    At Urja Engineering Company, we combine cutting-edge technology with robust design to create efficient, reliable electrical panel boards. Our solutions are crafted to meet the evolving demands of modern industries, ensuring seamless functionality, reduced downtime, and enhanced operational efficiency for both local and global markets.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-4.webp" alt="pannel"
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                  />
+                </motion.div>
+              </div>
             </div>
-            <div className="carousel-item h-96  max-md:h-40">
-              <img className="h-auto w-full" src="service-banner-3.webp" alt="Third slide" />
+            <div className="carousel-item w-full bg-[url('service-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-10">
+                <motion.div className="w-[60%] flex items-center flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm">Expert <span className="text-blue-600">Cable</span>Installation</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:w-full max-md:leading-normal">
+                    We deliver seamless cable installation services, covering underground cabling and overhead lines. Our expertise includes laying high-tension (HT) and low-tension (LT) cables, ensuring durability and efficiency. From planning to testing, we guarantee safe and reliable power supply tailored to your needs.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-5.webp" alt="pannel"
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                  />
+                </motion.div>
+              </div>
             </div>
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a className="carousel-control-prev flex items-center justify-center ml-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-prev max-md:mt-16 max-md:ml-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a className="carousel-control-next flex items-center justify-center mr-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-next max-md:mt-16 max-md:mr-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
@@ -67,9 +140,8 @@ const Services = () => {
         <div className="container flex flex-col gap-5 w-full my-10">
 
           <motion.div className="flex w-full my-8 max-md:flex-col"
-            initial={animate2 ? { opacity: 0, scaleX: 0.8 } : { opacity: 1, scaleX: 1 }}
-            whileInView={{ opacity: 1, scaleX: 1, transition: { duration: 2 } }}
-            exit={{ opacity: 1, scaleX: 1 }}
+            initial={animate2 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
             onAnimationComplete={() => setanimate2(false)}
           >
             <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">

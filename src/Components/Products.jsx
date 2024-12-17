@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+import { motion, AnimatePresence } from "motion/react"
 import { useState } from "react"
 import { Helmet } from "react-helmet-async"
 const Products = () => {
@@ -35,7 +35,17 @@ const Products = () => {
   const [animate31, setanimate31] = useState(true)
   const [animate32, setanimate32] = useState(true)
   const [animate33, setanimate33] = useState(true)
-
+  const [animate34, setanimate34] = useState(true)
+  const handleanimate = () => {
+    setInterval(() => {
+      setanimate1(false)
+    }, 2000);
+  }
+  const animate = () => {
+    setInterval(() => {
+      setanimate34(false)
+    }, 1000);
+  }
   return (
 
     <>
@@ -43,58 +53,116 @@ const Products = () => {
         <title>Products - Urja Engg Co.</title>
         <meta name="description" content="Discover Urja Engineering Co., where precision, reliability, and innovation drive our high-performance electrical panel boards. We cater to the unique needs of diverse industries with quality and expertise." />
       </Helmet>
-      <motion.div className="w-[98.9vw] flex absolute h-screen overflow-x-hidden overflow-y-hidden top-0 z-20"
-        style={{
-          visibility: animate1 ? "visible" : "hidden"
-        }}
-      >
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: -800 }}
-          exit={{ x: 0 }}
-          transition={{ duration: 2, ease: "circInOut" }}
-        >
-        </motion.div>
-        <motion.div className="w-1/2 bg-black h-full"
-          initial={{ x: 0 }}
-          animate={{ x: 800 }}
-          exit={{ x: 0 }}
-          onAnimationComplete={() => setanimate1(false)}
-          transition={{ duration: 2, ease: "circInOut" }}
-        >
-        </motion.div>
-      </motion.div>
+      {animate34 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
+        initial={{ width: 0 }}
+        animate={{ width: '100vw', ease: 'easeInOut' }}
+        transition={{ duration: 2, type: 'spring', stiffness: 100, damping: 10 }}
+        onAnimationComplete={animate}
+      ></motion.div>}
+      <AnimatePresence>
+        {animate1 && (
+          <motion.div
+            key={1}
+            className="fixed z-20 top-0 h-screen w-screen bg-white flex flex-col items-center justify-center"
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 10 }}
+            onAnimationComplete={handleanimate}
+          >
+            <img className="h-40 w-auto" src="logo.webp" alt="" />
+            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div className="min-h-[83vh]">
-        <motion.div id="carouselExampleControls" className="carousel slide" data-ride="carousel"
-          initial={animate2 ? { opacity: 0, scaleX: 0.8 } : { opacity: 1, scaleX: 1 }}
-          whileInView={{ opacity: 1, scaleX: 1, transition: { duration: 1, delay: 1 } }}
-          exit={{ opacity: 1, scaleX: 1 }}
+        <motion.div id="carouselExampleControls" className="carousel slide" data-interval="8000" data-ride="carousel"
+          initial={animate2 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
           onAnimationComplete={() => setanimate2(false)}
         >
           <div className="carousel-inner ">
-            <div className="carousel-item h-96 active max-md:h-40">
-              <img className="h-auto w-full" src="home-banner-3.webp" alt="First slide" />
+            <div className="carousel-item bg-blr bg-[url('home-banner-3.webp')] bg-cover w-full active h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
+                <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm"><span className="text-blue-600">APFC</span> Panels</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:leading-normal">Our APFC Panels are manufactured from high quality raw material. The power factor controller of our APFC Panels monitors the reactive power which in turn helps in saving energy.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-1.webp" alt="pannel"
+                    whileHover={{ scale: 1.1 }}
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                  />
+                </motion.div>
+              </div>
             </div>
-            <div className="carousel-item h-96 max-md:h-40">
-              <img className="h-auto w-full" src="product-banner-1.webp" alt="Second slide" />
+            <div className="carousel-item w-full bg-[url('product-banner-1.webp')] bg-cover h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
+                <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold text-neutral-300 text-5xl max-md:text-sm"><span className="text-blue-600">MCC</span> Panels</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:leading-normal">The MCC (Motor Circuit Control) panels conform to the international standards and are available with multiple power stabs that help in supporting high capacity industrial motors.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-2.webp" alt="pannel"
+                    whileHover={{ scale: 1.1 }}
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                  />
+                </motion.div>
+              </div>
             </div>
-            <div className="carousel-item h-96 max-md:h-40">
-              <img className="h-auto w-full" src="product-banner-2.webp" alt="Third slide" />
+            <div className="carousel-item w-full bg-[url('product-banner-2.webp')] bg-cover h-[550px] max-md:h-40">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#bababad6] via-[#111] to-[#000000] -z-10 opacity-70"></div>
+              <div className="flex h-full px-32 justify-center items-center cursor-default max-md:px-14">
+                <motion.div className="w-[60%] flex flex-col gap-5 max-md:gap-2"
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10 }}
+                >
+                  <div className="lato-bold self-start text-neutral-300 text-5xl max-md:text-sm"><span className="text-blue-600">PCC</span> Panels</div>
+                  <div className="roboto-regular text-lg text-neutral-200 leading-8 w-[80%] max-md:text-[8px] max-md:leading-normal">We are offering an effective range of process control panel which caters the specific requirements of various application areas. we can custom design PCC as per clients’ specifications.</div>
+                </motion.div>
+                <motion.div className="w-[30%] flex justify-end"
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
+                >
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-3.webp" alt="pannel"
+                    whileHover={{ scale: 1.1 }}
+                    drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                  />
+                </motion.div>
+              </div>
             </div>
           </div>
-          <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <a className="carousel-control-prev flex items-center justify-center ml-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-prev max-md:mt-16 max-md:ml-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="prev">
             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
             <span className="sr-only">Previous</span>
           </a>
-          <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <a className="carousel-control-next flex items-center justify-center mr-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-next max-md:mt-16 max-md:mr-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
             <span className="sr-only">Next</span>
           </a>
         </motion.div>
         <motion.div className="flex flex-col w-[80%] mx-auto my-14 gap-10"
-          initial={animate3 ? { opacity: 0, scaleX: 0.8 } : { opacity: 1, scaleX: 1 }}
-          whileInView={{ opacity: 1, scaleX: 1, transition: { duration: 1, delay: 1 } }}
-          exit={{ opacity: 1, scaleX: 1 }}
+          initial={animate3 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.9 } }}
           onAnimationComplete={() => setanimate3(false)}
         >
           <h1 className="text-3xl font-bold text-blue-500 lato-bold text-center">Our Products</h1>
@@ -122,7 +190,7 @@ const Products = () => {
               >
                 <img className="h-32 scale w-auto object-cover rounded-lg max-md:h-56 scale" src="product-1.webp" alt="" />
                 <div className="cursor-pointer text-blue-500 lato-bold text-xl font-bold">APFC Panels</div>
-                <div className="text-sm text-[#59595A] roboto-regular">Our APFC Panels are manufactured from high quality raw material. The power factor controller of our APFC Panels monitors the reactive power which in turn helps in saving energy..</div>
+                <div className="text-sm text-[#59595A] roboto-regular">Our APFC Panels are manufactured from high quality raw material. The power factor controller of our APFC Panels monitors the reactive power which in turn helps in saving energy.</div>
               </motion.div>
 
               <motion.div className="flex flex-col justify-center items-center border shadow-2xl mt-5 text-center rounded-xl gap-2 border-black w-[20%] p-2 max-xl:w-[45%] max-md:w-[80%]"
