@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "motion/react"
 import { useState } from "react"
 import { Helmet } from "react-helmet-async"
+import Icons from "./Icons"
 const Products = () => {
   const [animate1, setanimate1] = useState(true)
   const [animate2, setanimate2] = useState(true)
@@ -53,6 +54,7 @@ const Products = () => {
         <title>Products - Urja Engg Co.</title>
         <meta name="description" content="Discover Urja Engineering Co., where precision, reliability, and innovation drive our high-performance electrical panel boards. We cater to the unique needs of diverse industries with quality and expertise." />
       </Helmet>
+      <Icons />
       {animate34 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
         initial={{ width: 0 }}
         animate={{ width: '100vw', ease: 'easeInOut' }}

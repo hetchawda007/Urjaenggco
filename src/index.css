@@ -81,31 +81,28 @@
 }
 
 /* For Webkit browsers (Chrome, Edge, Safari) */
+/* Scrollbar for WebKit Browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Light background for the track */
+  background: #e6e6e6; /* Light background for track */
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #3080e8; /* Blue thumb */
-  border-radius: 6px; /* Rounded edges for the scrollbar */
-  border: 2px solid #f1f1f1; /* Space between thumb and track */
+  background: linear-gradient(135deg, #3080e8, #5aafff); /* Blue gradient */
+  border-radius: 6px;
+  border: 3px solid #e6e6e6; /* Adds spacing between track and thumb */
 }
 
-/* For Firefox */
-* {
-  scrollbar-width: thin; /* Thin scrollbar */
-  scrollbar-color: #3080e8 #f1f1f1; /* Thumb color, track color */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #1a66d1, #3080e8); /* Darker gradient on hover */
 }
 
-/* For Internet Explorer/Edge Legacy (Fallback) */
-body {
-  -ms-overflow-style: none; /* Hides the scrollbar in IE */
-}
-
+/* Optional: Smooth scrolling */
 html {
-  scroll-behavior: smooth; /* Smooth scrolling for better UX */
+  scroll-behavior: smooth;
 }

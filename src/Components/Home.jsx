@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "motion/react"
 import { useState } from "react"
+import Icons from "./Icons"
 import Marquee from "react-fast-marquee"
 import { Helmet } from "react-helmet-async"
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             setanimate11(false)
         }, 1000);
     }
+
     const [animate1, setanimate1] = useState(true)
     const [animate2, setanimate2] = useState(true)
     const [animate3, setanimate3] = useState(true)
@@ -32,6 +34,9 @@ const Home = () => {
                 <title>Home - Urja Engg Co.</title>
                 <meta name="description" content="Urja Engg Co specializes in manufacturing and supplying a wide range of electrical panel boards. We ensure top-notch quality for industrial and export standards." />
             </Helmet>
+            
+            <Icons />
+
             {animate11 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
                 initial={{ width: 0 }}
                 animate={{ width: '100vw', ease: 'easeInOut' }}
@@ -49,11 +54,11 @@ const Home = () => {
                         onAnimationComplete={handleanimate}
                     >
                         <img className="h-40 w-auto" src="logo.webp" alt="" />
-                        <div className="text-purple-800 font-semibold lato-bold">Leading Leading Pannel Board Manufacturer</div>
+                        <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
                     </motion.div>
                 )}
             </AnimatePresence>
-            <motion.div>
+            < motion.div >
                 <motion.div id="carouselExampleIndicators" className="carousel slide" data-interval="8000" data-ride="carousel"
                     initial={animate1 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
                     whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
@@ -117,7 +122,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-5.webp" alt="pannel"
+                                    <motion.img className="h-[500px] cursor-pointer w-auto max-md:h-28" src="panel-5.webp" alt="pannel"
                                         whileHover={{ scale: 1.1 }}
                                         drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />
@@ -286,7 +291,7 @@ const Home = () => {
 
                         </div>
                         <div className="flex justify-center object-cover w-[50%] max-md:w-full">
-                            <img className="w-auto h-72 border shadow-2xl border-black rounded-xl cursor-pointer scale" src="Products.webp" alt="" />
+                            <img className="w-auto h-72 border shadow-2xl border-black rounded-xl cursor-pointer scale" src="gallery-30.webp" alt="" />
                         </div>
                     </motion.div>
 
@@ -439,7 +444,7 @@ const Home = () => {
 
                 </div>
 
-            </motion.div>
+            </motion.div >
 
         </>
     )

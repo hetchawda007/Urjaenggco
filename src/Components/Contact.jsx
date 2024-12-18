@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "motion/react"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet-async"
+import Icons from "./Icons";
 const Contact = () => {
 
   const [animate1, setanimate1] = useState(true)
@@ -89,7 +90,7 @@ const Contact = () => {
         <title>Contact Us - Urja Engg Co.</title>
         <meta name="description" content="Get in touch with Urja Engineering Co. for inquiries, support, or partnerships. Reach out to us for high-quality electrical panel board solutions tailored to your needs." />
       </Helmet>
-
+      <Icons />
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -130,7 +131,7 @@ const Contact = () => {
 
         <motion.div id="carouselExampleControls" className="carousel slide w-full" data-interval="8000" data-ride="carousel"
           initial={animate2 ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
-          whileInView={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+          whileInView={{ opacity: 1, scale: 1, transition: { duration: 1, delay: 2.3 } }}
           exit={{ opacity: 1, scale: 1 }}
           onAnimationComplete={() => setanimate2(false)}
         >
@@ -150,20 +151,13 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <a className="carousel-control-prev flex items-center justify-center ml-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-prev max-md:mt-16 max-md:ml-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-          </a>
-          <a className="carousel-control-next flex items-center justify-center mr-10 p-[10px] bg-[#2b2b2b] rounded-full w-fit h-fit mt-64 carousel-control-next max-md:mt-16 max-md:mr-2 max-md:p-2" href="#carouselExampleControls" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-          </a>
+          
         </motion.div>
 
         <div className="w-full my-10 flex items-center max-md:flex-col max-md:justify-center">
           <motion.div className="left w-[49%] max-md:w-full"
             initial={animate6 ? { opacity: 0, x: -200 } : { opacity: 1, x: 0 }}
-            whileInView={{ opacity: 1, x: 0, transition: { duration: 2 } }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.6 } }}
             exit={{ opacity: 1, x: -200 }}
             onAnimationComplete={() => setanimate6(false)}
           >
@@ -196,7 +190,7 @@ const Contact = () => {
 
           <motion.div className="w-[49%] h-full flex items-center text-white roboto-regular max-md:w-full"
             initial={animate6 ? { opacity: 0, x: 300 } : { opacity: 1, x: 0 }}
-            whileInView={{ opacity: 1, x: 0, transition: { duration: 2 } }}
+            whileInView={{ opacity: 1, x: 0, transition: { duration: 1, delay: 2.6 } }}
             exit={{ opacity: 1, x: 300 }}
             onAnimationComplete={() => setanimate6(false)}
           >
