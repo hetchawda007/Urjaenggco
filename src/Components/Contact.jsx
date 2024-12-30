@@ -122,7 +122,7 @@ const Contact = () => {
             onAnimationComplete={handleanimate}
           >
             <img className="h-40 w-auto" src="logo.webp" alt="" />
-            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+            <div className="text-purple-800 font-semibold lato-bold">Leading panel Board Manufacturer</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -151,7 +151,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          
+
         </motion.div>
 
         <div className="w-full my-10 flex items-center max-md:flex-col max-md:justify-center">

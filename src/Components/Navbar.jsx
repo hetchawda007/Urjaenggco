@@ -27,11 +27,6 @@ const Navbar = () => {
                 </ul>
 
                 {visible === true && <motion.ul className="flex flex-col my-3 gap-3"
-                    initial={{ opacity: 0, y: -100 }}
-                    key={1}
-                    whileInView={{ opacity: 1, y: 0 }}
-
-                    transition={{ duration: 1.5, ease: "easeInOut", type: "spring", stiffness: 100, damping: 10 }}
                 >
                     <li className="cursor-pointer"><NavLink className={(e) => { return e.isActive ? "brightness-200 hover:no-underline hover:text-black shadow-xl font-bold md:px-3 md:py-2 transition duration-1000 bg-white text-black rounded-fmotion.ull flex rounded-full justify-center items-center py-2 md:hidden" : "hover:no-underline hover:transition hover:duration-1000 font-semibold shadow-xl rounded-full hover:text-black hover:rounded-full md:px-3 md:py-2 hover:bg-white flex justify-center items-center py-2 md:hidden" }} to="/">Home</NavLink></li>
                     <li className="cursor-pointer"><NavLink className={(e) => { return e.isActive ? "brightness-200 hover:no-underline hover:text-black shadow-xl font-bold md:px-3 md:py-2 transition duration-1000 bg-white text-black rounded-full flex justify-center items-center py-2 md:hidden" : "hover:no-underline hover:transition hover:duration-1000 font-semibold shadow-xl rounded-full hover:text-black hover:rounded-full md:px-3 md:py-2 hover:bg-white flex justify-center items-center py-2 md:hidden" }} to="/about">About</NavLink></li>

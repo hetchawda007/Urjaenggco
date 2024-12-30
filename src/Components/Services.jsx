@@ -45,7 +45,7 @@ const Services = () => {
             onAnimationComplete={handleanimate}
           >
             <img className="h-40 w-auto" src="logo.webp" alt="" />
-            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+            <div className="text-purple-800 font-semibold lato-bold">Leading panel Board Manufacturer</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -73,7 +73,7 @@ const Services = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-6.webp" alt="pannel"
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-6.webp" alt="panel"
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     whileHover={{ scale: 1.1 }}
                   />
@@ -97,7 +97,7 @@ const Services = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-4.webp" alt="pannel"
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-4.webp" alt="panel"
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     whileHover={{ scale: 1.1 }}
                   />
@@ -121,7 +121,7 @@ const Services = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-5.webp" alt="pannel"
+                  <motion.img className="h-96 w-auto cursor-pointer max-md:h-28" src="panel-5.webp" alt="panel"
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     whileHover={{ scale: 1.1 }}
                   />
@@ -147,7 +147,7 @@ const Services = () => {
             onAnimationComplete={() => setanimate2(false)}
           >
             <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">
-              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale scale" src="electric-pannel-board.webp" alt="" />
+              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale scale" src="electric-panel-board.webp" alt="" />
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 

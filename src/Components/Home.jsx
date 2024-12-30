@@ -34,7 +34,7 @@ const Home = () => {
                 <title>Home - Urja Engg Co.</title>
                 <meta name="description" content="Urja Engg Co specializes in manufacturing and supplying a wide range of electrical panel boards. We ensure top-notch quality for industrial and export standards." />
             </Helmet>
-            
+
             <Icons />
 
             {animate11 && <motion.div className="fixed top-0 z-30 h-[1vh] bg-gradient-to-r from-blue-500 via-green-500 to-purple-500"
@@ -54,7 +54,7 @@ const Home = () => {
                         onAnimationComplete={handleanimate}
                     >
                         <img className="h-40 w-auto" src="logo.webp" alt="" />
-                        <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+                        <div className="text-purple-800 font-semibold lato-bold">Leading panel Board Manufacturer</div>
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -88,7 +88,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-4.webp" alt="pannel"
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-4.webp" alt="panel"
                                         whileHover={{ scale: 1.1 }}
                                         drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />
@@ -122,7 +122,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-[500px] cursor-pointer w-auto max-md:h-28" src="panel-5.webp" alt="pannel"
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-5.webp" alt="panel"
                                         whileHover={{ scale: 1.1 }}
                                         drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />
@@ -151,7 +151,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-6.webp" alt="pannel"
+                                    <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-6.webp" alt="panel"
                                         whileHover={{ scale: 1.1 }}
                                         drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />
@@ -193,7 +193,7 @@ const Home = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                                 >
-                                    <motion.img className="h-64 w-auto max-md:h-20" src="logo.png" alt="pannel"
+                                    <motion.img className="h-64 w-auto max-md:h-20" src="logo.png" alt="panel"
                                         whileHover={{ scale: 1.1 }}
                                         drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                                     />

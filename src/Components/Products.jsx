@@ -72,7 +72,7 @@ const Products = () => {
             onAnimationComplete={handleanimate}
           >
             <img className="h-40 w-auto" src="logo.webp" alt="" />
-            <div className="text-purple-800 font-semibold lato-bold">Leading Pannel Board Manufacturer</div>
+            <div className="text-purple-800 font-semibold lato-bold">Leading panel Board Manufacturer</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -99,7 +99,7 @@ const Products = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-1.webp" alt="pannel"
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-1.webp" alt="panel"
                     whileHover={{ scale: 1.1 }}
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                   />
@@ -122,7 +122,7 @@ const Products = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-2.webp" alt="pannel"
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-2.webp" alt="panel"
                     whileHover={{ scale: 1.1 }}
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                   />
@@ -145,7 +145,7 @@ const Products = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, ease: 'anticipate', type: 'spring', shiftness: 100, damping: 10, delay: 1 }}
                 >
-                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-3.webp" alt="pannel"
+                  <motion.img className="h-96 cursor-pointer w-auto max-md:h-28" src="panel-3.webp" alt="panel"
                     whileHover={{ scale: 1.1 }}
                     drag dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                   />
@@ -257,7 +257,7 @@ const Products = () => {
                 onAnimationComplete={() => setanimate11(false)}
               >
                 <img className="w-auto h-32 scale cursor-pointer object-cover rounded-lg max-md:h-56" src="product-7.webp" alt="" />
-                <div className="cursor-pointer text-xl font-bold text-blue-500 lato-bold">Ats pannel</div>
+                <div className="cursor-pointer text-xl font-bold text-blue-500 lato-bold">Ats panel</div>
                 <div className="text-sm text-[#59595A] roboto-regular">Reliable and versatile automation panels, offering seamless control and optimization for industrial processes. Custom-built to match client specifications.  </div>
               </motion.div>
             </div>
