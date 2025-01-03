@@ -18,6 +18,7 @@ const About = () => {
   const [animate14, setanimate14] = useState(true)
   const [animate15, setanimate15] = useState(true)
   const [animate16, setanimate16] = useState(true)
+  const [animate17, setanimate17] = useState(true)
   const handleanimate = () => {
     setInterval(() => {
       setanimate15(false)
@@ -256,10 +257,30 @@ const About = () => {
                 <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-30.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-2.webp" alt="" />
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-2.webp" alt="" />
               </div>
               <div>
                 <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-15.webp" alt="" />
+              </div>
+            </motion.div>
+
+            <motion.div className="flex justify-evenly gap-10 flex-wrap"
+              initial={animate17 ? { opacity: 0 } : { opacity: 1 }}
+              whileInView={{ opacity: 1, transition: { duration: 2 } }}
+              exit={{ opacity: 1 }}
+              onAnimationComplete={() => setanimate17(false)}
+            >
+              <div>
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-35.webp" alt="" />
+              </div>
+              <div>
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-36.webp" alt="" />
+              </div>
+              <div>
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-37.webp" alt="" />
+              </div>
+              <div>
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-38.webp" alt="" />
               </div>
             </motion.div>
 
@@ -279,7 +300,7 @@ const About = () => {
                 <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-28.webp" alt="" />
               </div>
               <div>
-                <img className="h-auto shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-29.webp" alt="" />
+                <img className="h-[178px] shd border border-black scale cursor-pointer w-60 object-fill scale rounded-xl" src="gallery-29.webp" alt="" />
               </div>
             </motion.div>
 
