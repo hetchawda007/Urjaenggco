@@ -147,7 +147,7 @@ const Services = () => {
             onAnimationComplete={() => setanimate2(false)}
           >
             <div className="flex justify-center object-cover w-[50%] max-md:w-full cursor-pointer">
-              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale scale" src="electric-panel-board.webp" alt="" />
+              <img className="w-auto h-72 border shadow-2xl border-black rounded-xl scale scale" src="gallery-29.webp" alt="" />
             </div>
             <div className="flex flex-col w-[50%] items-center justify-center gap-5 px-20 max-md:px-5 max-md:w-full">
 
